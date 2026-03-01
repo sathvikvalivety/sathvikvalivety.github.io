@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Certified Ethical Hacker (CEH)",
+    "issuer": "EC-Council",
+    "date": "Expected 2026",
+    "category": "Security",
+    "link": "#",
+    "image": "https://picsum.photos/seed/ceh/800/600",
+    "description": "Advanced ethical hacking certification covering 20 of the most current security domains."
+  },
+  {
+    "title": "Oracle Cloud Infrastructure 2025 Certified Networking Professional",
+    "issuer": "Oracle",
+    "date": "2025",
+    "category": "Cloud",
+    "link": "#",
+    "image": "https://picsum.photos/seed/oracle/800/600",
+    "description": "Professional certification for designing and implementing OCI networking solutions."
+  },
+  {
+    "title": "AWS Certified Solutions Architect",
+    "issuer": "Amazon Web Services",
+    "date": "2024",
+    "category": "Cloud",
+    "link": "#",
+    "image": "https://picsum.photos/seed/aws/800/600",
+    "description": "Expertise in designing distributed systems on the AWS platform."
+  },
+  {
+    "title": "Google Cybersecurity Professional Certificate",
+    "issuer": "Google",
+    "date": "2024",
+    "category": "Security",
+    "link": "#",
+    "image": "https://picsum.photos/seed/google-sec/800/600",
+    "description": "Comprehensive training in cybersecurity fundamentals, networks, and logs."
+  }
+]

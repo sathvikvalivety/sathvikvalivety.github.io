@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Kadham Sustainability Platform",
+    "description": [
+      "Built full-stack blockchain platform rewarding users with ERC-20 (GBC) tokens for waste disposal.",
+      "Constructed 4 core components: JWT authentication, MetaMask integration, Mistral AI-powered waste classification.",
+      "Deployed 2 Solidity smart contracts with role-based access control."
+    ],
+    "tags": ["Solidity", "Blockchain", "React", "AI", "Web3"],
+    "category": "Blockchain",
+    "image": "https://picsum.photos/seed/blockchain/800/600",
+    "github": "#"
+  },
+  {
+    "title": "Rubik's Cube Visualizer",
+    "description": [
+      "Designed 3D interactive Rubik's Cube with scrambling and solving features.",
+      "Used CSS 3D transforms and JavaScript for smooth rotations and animations across 54 cube facets.",
+      "Supports 6 face rotations and 20-move scrambles."
+    ],
+    "tags": ["JavaScript", "CSS 3D", "Algorithms", "UI/UX"],
+    "category": "Web Development",
+    "image": "https://picsum.photos/seed/rubiks/800/600",
+    "github": "#"
+  },
+  {
+    "title": "Ransomware Early Warning System",
+    "description": [
+      "Developed behavior-based detection for Android monitoring file encryption and rapid operations.",
+      "Crafted FileObserver monitoring and process scanning with 5+ permission checks.",
+      "Automated foreground service for threat logging with low resource usage."
+    ],
+    "tags": ["Android", "Java", "Cybersecurity", "Forensics"],
+    "category": "Security",
+    "image": "https://picsum.photos/seed/security/800/600",
+    "github": "#"
+  },
+  {
+    "title": "Movie Streaming Platform",
+    "description": [
+      "Coded full-stack movie streaming app with JWT auth and watch progress tracking.",
+      "Used bcrypt hashing and MongoDB for data storage of 100+ movies.",
+      "Implemented captcha signup and resume functionality."
+    ],
+    "tags": ["Node.js", "MongoDB", "React", "Auth"],
+    "category": "Full Stack",
+    "image": "https://picsum.photos/seed/streaming/800/600",
+    "github": "#"
+  },
+  {
+    "title": "Android Malware Detector",
+    "description": [
+      "Built a Kotlin-based application to scan installed apps for known malware signatures.",
+      "Integrated a cloud-based threat intelligence API for real-time updates.",
+      "Implemented background scanning and user notification system."
+    ],
+    "tags": ["Kotlin", "Android", "Cybersecurity", "API"],
+    "category": "App Development",
+    "image": "https://picsum.photos/seed/malware/800/600",
+    "github": "#"
+  },
+  {
+    "title": "Decentralized Voting System",
+    "description": [
+      "Created a secure voting platform using Ethereum smart contracts to prevent tampering.",
+      "Implemented zero-knowledge proofs for voter anonymity.",
+      "Designed a React-based dashboard for real-time result tracking."
+    ],
+    "tags": ["Solidity", "Ethereum", "React", "Cryptography"],
+    "category": "Blockchain",
+    "image": "https://picsum.photos/seed/voting/800/600",
+    "github": "#"
+  }
+]
