@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  ExternalLink, 
-  Download, 
-  Terminal, 
-  Shield, 
-  Cpu, 
-  Database, 
-  Globe, 
-  Code2, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Download,
+  Terminal,
+  Shield,
+  Cpu,
+  Database,
+  Globe,
+  Code2,
   ChevronRight,
   Menu,
   X,
@@ -23,6 +23,7 @@ import {
 import { cn } from './lib/utils';
 import projectsData from './data/projects.json';
 import certificatesData from './data/certificates.json';
+import profileImg from "./data/IMG20250316130515.jpg";
 
 // --- Types ---
 
@@ -117,15 +118,15 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
+            <a
+              key={link.name}
               href={link.href}
               className="text-sm font-medium text-slate-400 hover:text-cyber-green transition-colors uppercase tracking-widest"
             >
               {link.name}
             </a>
           ))}
-          <button 
+          <button
             onClick={() => window.print()}
             className="px-4 py-2 bg-cyber-green/10 border border-cyber-green/50 text-cyber-green text-xs font-bold rounded hover:bg-cyber-green hover:text-cyber-dark transition-all flex items-center gap-2"
           >
@@ -150,8 +151,8 @@ const Navbar = () => {
             className="absolute top-full left-0 right-0 bg-cyber-dark border-b border-cyber-green/20 p-6 md:hidden flex flex-col gap-4"
           >
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
+              <a
+                key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-medium text-slate-300 hover:text-cyber-green"
@@ -159,7 +160,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <button 
+            <button
               onClick={() => { window.print(); setIsOpen(false); }}
               className="w-full py-3 bg-cyber-green text-cyber-dark font-bold rounded flex items-center justify-center gap-2"
             >
@@ -223,7 +224,7 @@ const TerminalHero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden cyber-grid">
       <div className="absolute inset-0 bg-gradient-to-b from-cyber-dark via-transparent to-cyber-dark z-0" />
-      
+
       <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -237,20 +238,20 @@ const TerminalHero = () => {
             </span>
             AVAILABLE FOR INTERNSHIPS
           </div>
-          
+
           <h1 className="text-6xl md:text-8xl font-display leading-[0.9] mb-6">
             VALIVETY <br />
             <span className="text-cyber-green glow-text">SATHVIK</span>
           </h1>
-          
+
           <p className="text-xl text-slate-400 max-w-lg mb-8 font-mono">
             &gt; Cybersecurity Student & Blockchain Enthusiast. <br />
             &gt; Building secure, decentralized, and interactive digital experiences.
           </p>
-          
+
           <div className="flex flex-wrap gap-4">
-            <a 
-              href="#projects" 
+            <a
+              href="#projects"
               className="px-8 py-4 bg-cyber-green text-cyber-dark font-bold rounded-lg hover:bg-white transition-all flex items-center gap-2 group"
             >
               VIEW PROJECTS
@@ -294,7 +295,7 @@ const TerminalHero = () => {
                   )}
                 </div>
               ))}
-              
+
               {isTyping && currentLineIndex < terminalSequence.length && (
                 <div>
                   {terminalSequence[currentLineIndex].type === 'command' ? (
@@ -317,7 +318,7 @@ const TerminalHero = () => {
               )}
             </div>
           </div>
-          
+
           {/* Decorative Elements */}
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-cyber-green/10 rounded-full blur-3xl" />
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-cyber-blue/10 rounded-full blur-3xl" />
@@ -362,14 +363,14 @@ const ProjectCard = ({ project, index }: { project: Project, index: number, key?
       className="group relative bg-cyber-gray/20 border border-cyber-green/10 rounded-2xl overflow-hidden hover:border-cyber-green/30 transition-all h-full"
     >
       <div className="aspect-video overflow-hidden relative">
-        <img 
-          src={project.image} 
-          alt={project.title} 
+        <img
+          src={project.image}
+          alt={project.title}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-cyber-dark via-transparent to-transparent opacity-80" />
-        
+
         <div className="absolute top-4 right-4 flex gap-2">
           {project.github && (
             <a href={project.github} className="p-2 bg-cyber-dark/80 backdrop-blur-md rounded-full text-white hover:text-cyber-green transition-colors">
@@ -433,14 +434,14 @@ const CertificateCard = ({ cert, index }: { cert: Certificate, index: number, ke
       className="group relative bg-cyber-gray/20 border border-cyber-green/10 rounded-2xl overflow-hidden hover:border-cyber-green/30 transition-all h-full"
     >
       <div className="aspect-video overflow-hidden relative">
-        <img 
-          src={cert.image} 
-          alt={cert.title} 
+        <img
+          src={cert.image}
+          alt={cert.title}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-cyber-dark via-transparent to-transparent opacity-80" />
-        
+
         <div className="absolute top-4 right-4 flex gap-2">
           {cert.link && (
             <a href={cert.link} className="p-2 bg-cyber-dark/80 backdrop-blur-md rounded-full text-white hover:text-cyber-green transition-colors">
@@ -468,7 +469,7 @@ const CertificateCard = ({ cert, index }: { cert: Certificate, index: number, ke
 export default function App() {
   const [projectFilter, setProjectFilter] = useState('All');
   const [certFilter, setCertFilter] = useState('All');
-  
+
   const projectCategories = ['All', ...Array.from(new Set(PROJECTS.map(p => p.category)))];
   const projectTech = ['All', 'React', 'Solidity', 'Kotlin', 'Python', 'Java', 'Node.js', 'Android'];
 
@@ -487,7 +488,7 @@ export default function App() {
   return (
     <div className="bg-cyber-dark min-h-screen selection:bg-cyber-green/30">
       <Navbar />
-      
+
       <TerminalHero />
 
       {/* About Section */}
@@ -499,10 +500,10 @@ export default function App() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square rounded-2xl overflow-hidden border border-cyber-green/20 relative z-10">
-              <img 
-                src="https://picsum.photos/seed/sathvik/600/600" 
-                alt="Valivety Sathvik" 
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-cyber-green/20 relative z-10">
+              <img
+                src={profileImg}
+                alt="Valivety Sathvik"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -585,8 +586,8 @@ export default function App() {
                   onClick={() => setProjectFilter(cat)}
                   className={cn(
                     "px-4 py-2 text-[10px] font-bold rounded border transition-all uppercase tracking-widest",
-                    projectFilter === cat 
-                      ? "bg-cyber-green text-cyber-dark border-cyber-green" 
+                    projectFilter === cat
+                      ? "bg-cyber-green text-cyber-dark border-cyber-green"
                       : "bg-transparent text-slate-400 border-slate-800 hover:border-cyber-green/50"
                   )}
                 >
@@ -602,8 +603,8 @@ export default function App() {
                   onClick={() => setProjectFilter(tech)}
                   className={cn(
                     "px-3 py-1.5 text-[10px] font-bold rounded border transition-all uppercase tracking-widest",
-                    projectFilter === tech 
-                      ? "bg-cyber-blue text-cyber-dark border-cyber-blue" 
+                    projectFilter === tech
+                      ? "bg-cyber-blue text-cyber-dark border-cyber-blue"
                       : "bg-transparent text-slate-500 border-slate-800 hover:border-cyber-blue/50"
                   )}
                 >
@@ -613,7 +614,7 @@ export default function App() {
             </div>
           </div>
 
-          <motion.div 
+          <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
@@ -623,11 +624,11 @@ export default function App() {
               ))}
             </AnimatePresence>
           </motion.div>
-          
+
           {filteredProjects.length === 0 && (
             <div className="py-20 text-center border border-dashed border-slate-800 rounded-2xl">
               <p className="text-slate-500 font-mono">No projects found for the selected filter.</p>
-              <button 
+              <button
                 onClick={() => setProjectFilter('All')}
                 className="mt-4 text-cyber-green text-xs font-bold uppercase tracking-widest hover:underline"
               >
@@ -660,8 +661,8 @@ export default function App() {
                 onClick={() => setCertFilter(cat)}
                 className={cn(
                   "px-4 py-2 text-[10px] font-bold rounded border transition-all uppercase tracking-widest",
-                  certFilter === cat 
-                    ? "bg-cyber-green text-cyber-dark border-cyber-green" 
+                  certFilter === cat
+                    ? "bg-cyber-green text-cyber-dark border-cyber-green"
                     : "bg-transparent text-slate-400 border-slate-800 hover:border-cyber-green/50"
                 )}
               >
@@ -670,7 +671,7 @@ export default function App() {
             ))}
           </div>
 
-          <motion.div 
+          <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
@@ -713,23 +714,23 @@ export default function App() {
           </div>
           <div className="lg:col-span-2">
             <div className="space-y-4">
-              <ExperienceItem 
+              <ExperienceItem
                 item={{
                   period: "2025",
                   title: "Website Lead",
                   organization: "Amrita Cybernation 2025",
                   description: "Designed and hosted the official website for Cybernation 2025, managing high-traffic loads and ensuring a secure, interactive user experience for participants."
-                }} 
-                index={0} 
+                }}
+                index={0}
               />
-              <ExperienceItem 
+              <ExperienceItem
                 item={{
                   period: "2023 - 2024",
                   title: "CTF Competitor",
                   organization: "Various National Hackathons",
                   description: "Collaborated in multiple CTF events, solving 12+ complex tasks in cryptography, web exploitation, and binary analysis. Enhanced threat mitigation skills through real-world scenarios."
-                }} 
-                index={1} 
+                }}
+                index={1}
               />
             </div>
           </div>
@@ -746,8 +747,8 @@ export default function App() {
             Whether you have a question about my projects, want to discuss cybersecurity, or just want to say hi, my inbox is always open.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-            <a 
-              href="mailto:sathvikvalivety@gmail.com" 
+            <a
+              href="mailto:sathvikvalivety@gmail.com"
               className="w-full md:w-auto px-8 py-4 bg-cyber-green text-cyber-dark font-bold rounded-lg hover:bg-white transition-all flex items-center justify-center gap-2"
             >
               <Mail className="w-5 h-5" />
@@ -779,7 +780,7 @@ export default function App() {
       <div className="hidden print:block bg-white text-black p-12 font-serif">
         <h1 className="text-4xl font-bold mb-2">Valivety Sathvik</h1>
         <p className="mb-6 border-b pb-4">sathvikvalivety@gmail.com | +91 9199194449 | Cybersecurity & Blockchain</p>
-        
+
         <h2 className="text-xl font-bold uppercase border-b mb-4">Education</h2>
         <div className="mb-4">
           <div className="flex justify-between font-bold">
